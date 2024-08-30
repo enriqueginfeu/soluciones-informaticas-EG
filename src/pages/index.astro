@@ -5,6 +5,7 @@ import Repuestos from '../components/Repuestos.astro';
 import Horarios from '../components/Horarios.astro';
 import Layout from '../layouts/Layout.astro';
 import SobreMi from '../components/SobreMi.astro';
+import Clientes from '../components/Clientes.astro';
 
 ---
 
@@ -19,11 +20,11 @@ import SobreMi from '../components/SobreMi.astro';
 		
 			<SobreMi/>
 		
-		<section class="py-20 md:grid md:grid-cols-2 lg:w-[75%] lg:m-auto xl:w-[50%]">
 			<Reparaciones/>
-		</section>
 		
 		    <Repuestos/>
+
+            <Clientes/>
 		
 			<Horarios/>
 		
@@ -67,7 +68,7 @@ document.querySelector('.arriba-contenedor')
 	.arriba-contenedor {
     position: fixed;
     bottom: 5rem;
-    right: .6rem;
+    right: .7rem;
     width: 1rem;
     height: 1rem;
     z-index: -1;
@@ -92,7 +93,6 @@ document.querySelector('.arriba-contenedor')
 
 .boton-hacia-arriba i {
     position: absolute;
-    font-size: 1.1rem;
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%) scale(0);
@@ -113,8 +113,8 @@ document.querySelector('.arriba-contenedor')
 
 @media (min-width: 768px) {
 	.show .boton-hacia-arriba {
-		width: 3rem;
-		height: 3rem;
+		width: 2.5rem;
+		height: 2.5rem;
 	}
 }
 
