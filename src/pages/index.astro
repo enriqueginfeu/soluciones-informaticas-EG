@@ -1,11 +1,13 @@
 ---
 import Banner from '../components/Banner.astro';
 import Reparaciones from '../components/Reparaciones.astro';
-import Repuestos from '../components/Repuestos.astro';
 import Horarios from '../components/Horarios.astro';
 import Layout from '../layouts/Layout.astro';
 import SobreMi from '../components/SobreMi.astro';
-import Clientes from '../components/Clientes.astro';
+import Galeria from '../components/Galeria.astro';
+import Testimonios from '../components/Testimonios.astro';
+import BotonArriba from '../components/BotonArriba.astro';
+import BotonWhatsapp from '../components/BotonWhatsapp.astro';
 
 ---
 
@@ -15,127 +17,16 @@ import Clientes from '../components/Clientes.astro';
     keywords="soporte técnico, reparación, PCs, teléfonos, servicios IT, consolas de videojuegos, desktop, computadoras, celulares"
     >
 	<main>
-		
-			<Banner/>
-		
-			<SobreMi/>
-		
-			<Reparaciones/>
-		
-		    <Repuestos/>
-
-            <Clientes/>
-		
-			<Horarios/>
-		
+		<Banner/>		
+		<SobreMi/>		
+		<Reparaciones/>
+        <Galeria/>
+        <Testimonios/>
+		<Horarios/>
 	</main>
-    <section class="fixed bottom-[1rem] right-[0.5rem]">
-        <div class="rounded-full">
-            <a href="https://wa.me/c/5491131684683" target="_blank" rel="noopener noreferrer">
-                <img src="/whts_sm.webp" loading="lazy" alt="WhatsApp Icon" class="h-10 w-10 hover:scale-110 hover:transition hover:duration-300">
-            </a>
-        </div>
-    </section>
-    
-	<div class="arriba-contenedor">
-        <div class="boton-hacia-arriba">
-            <i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.0002 3.58569L19.4144 10.9999L18.0002 12.4141L13.0002 7.41412V19.9999H11.0002V7.41412L6.00015 12.4141L4.58594 10.9999L12.0002 3.58569Z" fill="white"/></svg>
-            </i>
-        </div>
-    </div>
+    <BotonWhatsapp/>
+    <BotonArriba/>
 </Layout>
 
-<script>
-	window.onscroll = function() {
-    if(document.documentElement.scrollTop > 2000) {
-        document.querySelector('.arriba-contenedor').classList.add('show');
-    }else{
-        document.querySelector('.arriba-contenedor').classList.remove('show');
-    }
-}
-
-document.querySelector('.arriba-contenedor')
-.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
-})
-</script>
-
-<style>
-	.arriba-contenedor {
-    position: fixed;
-    bottom: 5rem;
-    right: .7rem;
-    width: 1rem;
-    height: 1rem;
-    z-index: -1;
-}
-
-.boton-hacia-arriba {
-    width: 0;
-    height: 0;
-    background: #cf1e1e;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .3s;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
-    z-index: -1;
-}
-
-.boton-hacia-arriba:hover {
-    background: #fd5454; 
-}
-
-.boton-hacia-arriba i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%) scale(0);
-    color: #ffffff;
-    transition: .3s;
-}
-
-.show {
-    z-index: 10;
-}
-
-.show .boton-hacia-arriba {
-    animation: popup .3s ease-in-out;
-    width: 2.5rem;
-    height: 2.5rem;
-    z-index: 11;
-}
-
-@media (min-width: 768px) {
-	.show .boton-hacia-arriba {
-		width: 2.5rem;
-		height: 2.5rem;
-	}
-}
-
-.show i {
-    transform:translate(-50%, -50%) scale(1);
-}
-
-@keyframes popup{
-    0%{
-        width: 0rem;
-        height: 0rem;
-    }
-    50%{
-        width: 6rem;
-        height: 6rem;
-    }
-    100%{
-            width: 4.6rem;
-            height: 4.6rem;
-    }
-}
-</style>
 
 	

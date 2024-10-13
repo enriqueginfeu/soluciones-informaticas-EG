@@ -1,25 +1,25 @@
 
-<div class="mt-2 shadow-2xl image-container">
-    <img src="/banner_sm2.webp" alt="banner" class="w-[100%] sm:hidden">
-    <img src="/5.webp" alt="" class="image hidden sm:flex">
-    <div class="text-overlay">
-        <h1 class="mb-3 text-lg md:text-4xl lg:text-5xl lg:mb-20">
-            Servicio Tecnico y Digital <span>Soluciones Informáticas EG</span>
+<div class="mt-10 shadow-2xl image-container">
+    <img src="/banner_sm2.webp" alt="banner mobile" class="sm:hidden w-[100%] h-[100%]">
+    <img src="/banner_xl.webp" alt="banner desktop" class="hidden sm:flex w-[100%] h-[100%]">
+    <div class="text-overlay lg:max-w-4xl lg:m-auto">
+        <h1 class="mb-3 text-lg md:text-3xl lg:text-5xl lg:mb-20">
+            Servicio Tecnico <br> <span>Soluciones Informáticas EG</span>
         </h1>
-        <p class="md:text-2xl pb-5">
+        <p class="text-base md:text-xl lg:text-2xl pb-5">
             En Soluciones Informáticas EG te ayudamos a resolver cualquier inconveniente de una manera ágil y cómoda, a través de una atención personalizada.
         </p>
     </div>
 </div>
 
 <style>
-    .image-container {
+.image-container {
     position: relative;
 }
 
 .text-overlay {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 85%;
@@ -27,5 +27,17 @@
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-overlay {
+        top: 35%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .text-overlay {
+        top: 45%;
+    }
 }
 </style>

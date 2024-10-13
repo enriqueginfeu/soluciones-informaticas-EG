@@ -1,0 +1,30 @@
+---
+import BotonMensaje from './BotonMensaje.astro';
+
+interface Props {
+    titulo: string;
+    img: string;
+}
+
+const { titulo, img } = Astro.props;
+
+---
+
+<div class="bg-white p-10 lg:p-5 rounded-lg sombra-card">
+        <h2 class="text-xl font-medium">        
+            {titulo}
+        </h2>
+        <img src={img} alt="">
+        <BotonMensaje/>
+</div>
+
+<style>
+    .sombra-card {
+    transition: filter 0.5s ease;
+    filter: drop-shadow(0 0 .3rem rgba(46, 46, 46, 0.527));
+}
+
+.sombra-card:hover {
+    filter: drop-shadow(0 0 1rem rgba(46, 46, 46, 0.527));
+}
+</style>

@@ -1,23 +1,40 @@
 
-<footer class="sombra-top text-center w-full p-4 bg-[#f5f5f5] border-t border-gray-200 lg:flex lg:items-center lg:justify-between md:p-6" id="redes">
-    <div class="flex my-2 items-center justify-center">
-        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/facebook_sm.webp" loading="lazy" class="hover:scale-105 hover:transition hover:duration-300" alt="logo facebook">
-        </a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/instagram_sm.webp" loading="lazy" class="hover:scale-105 hover:transition hover:duration-300" alt="logo instagram">
-        </a>
+<footer class="sombra-top text-center w-full p-4 bg-[#f5f5f5] border-t border-gray-200 lg:flex lg:items-center lg:flex-col md:p-6" id="redes">
+    <div class="flex my-2 items-center justify-center mx-40 lg:w-[20%]">
+        <div>
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/f.svg" loading="lazy" class="sombra-redes w-1/2 sm:w-1/4 md:1/5  m-auto" alt="logo facebook">
+            </a>
+        </div>
+        <div>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/i.svg" loading="lazy" class="sombra-redes w-1/2 sm:w-1/4 md:1/5 m-auto" alt="logo instagram">
+            </a>
+        </div>
+        <div>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/w.svg" loading="lazy" class="sombra-redes w-1/2 sm:w-1/4 md:1/5 m-auto" alt="logo whatsapp">
+            </a>
+        </div>
     </div>
     <div class="w-3/4 m-auto">
-        <span class="text-sm sm:text-center">© 2024 Soluciones Informáticas EG</a>. Todos los Derechos Reservados.
+        <span class="text-sm sm:text-center md:text-lg lg:text-xl">© 2024 Soluciones Informáticas EG</a>. Todos los Derechos Reservados.
         </span>
     </div>
 </footer>
 
 <style>
-    .sombra-top {
-        -webkit-box-shadow: 0px -7px 25px -4px rgba(173,173,173,1);
--moz-box-shadow: 0px -7px 25px -4px rgba(173,173,173,1);
-box-shadow: 0px -7px 25px -4px rgba(173,173,173,1);
-    }
+.sombra-top {
+    -webkit-box-shadow: 0px -7px 25px -4px rgba(173,173,173,1);
+    -moz-box-shadow: 0px -7px 25px -4px rgba(173,173,173,1);
+    box-shadow: 0px -7px 25px -4px rgba(173,173,173,1);
+}
+
+.sombra-redes {
+    transition: filter 0.3s ease;
+}
+
+.sombra-redes:hover {
+    filter: drop-shadow(0 0 0.8rem rgb(8, 28, 65));
+}
 </style>

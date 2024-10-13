@@ -1,0 +1,67 @@
+---
+import CardAccesorios from "./CardAccesorios.astro";
+---
+
+<div class="mt-10">
+    <div>
+        <img src="/banner_accesorios.webp" class="sombra-banner" alt="">
+    </div>
+    <div class="py-20 px-10 mt-20 gap-10 grid md:grid-cols-2 lg:grid-cols-3 lg:gap-16 lg:max-w-screen-xl lg:m-auto">
+    <CardAccesorios
+        titulo="Disco Solido Ssd 240Gb Adata SU630"
+        img="/240_adata.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 480Gb Adata SU650"
+        img="/480_adata.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 960Gb Adata SU650"
+        img="/960_adata.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 240Gb Western Digital Green"
+        img="/240_wd.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 480Gb Western Digital Green"
+        img="/480_wd.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 240Gb Kingston A400"
+        img="/240_kingston.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 480Gb Kingston A400"
+        img="/480_960_kingston.webp"
+    />
+    <CardAccesorios
+        titulo="Disco Solido Ssd 960Gb Kingston A400"
+        img="/480_960_kingston.webp"
+    />
+    <CardAccesorios
+        titulo="Pen Drive 64 Gb Kingston - DT70 Negro - Tipo C"
+        img="/dt70_64_c.webp"
+    />
+    <CardAccesorios
+        titulo="Pen Drive 128 Gb Kingston - DTKN Kyson"
+        img="/kyson_128.webp"
+    />
+    <CardAccesorios
+        titulo="Pen Drive 128 Gb Kingston Exodia DTX Negro"
+        img="/exodia_128.webp"
+    />
+    <CardAccesorios
+        titulo="MicroSD+SD 32 Gb Canvas Select Plus Kingston"
+        img="/canva_select_plus_32.webp"
+    />
+    </div>
+</div>
+
+<style>
+.sombra-banner {
+    transition: filter 0.5s ease;
+    filter: drop-shadow(0 0 .3rem rgba(46, 46, 46, 0.527));
+}
+
+</style>

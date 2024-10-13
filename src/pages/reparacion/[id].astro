@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import reparaciones from '../../reparaciones.js';
+
+const { id } = Astro.params;
+const reparacion = reparaciones.find(r => r.id == Number(id));
+
+if (!reparacion) {
+    return Astro.redirect("/404");
+}
+---
+<Layout
+    title=`Soluciones Informaticas EG | Reparacion ${reparacion.titulo}`
+    description=`${reparacion.descripcion}`
+    keywords='reparacion de celulares, cambio de bateria'
+>
+    <article class="p-5 lg:grid lg:grid-cols-2 lg:gap-10 lg:py-10 lg:px-20">
+        <div>
+            <img src={reparacion.img} alt={reparacion.titulo} class="rounded sombra_img"/>
+        </div>
+        <div class="mt-8">
+            <h1 class="text-xl lg:text-2xl">{reparacion.titulo}</h1>
+            <p class="text-lg lg:text-xl mt-10">{reparacion.descripcion}</p>
+            <div class="mt-16 mb-5 text-center">
+                <a href="/#clientes" class="px-10 rounded-sm text-lg font-medium border border-gray-500 text-gray-500 w-52 text-center py-1 hover:bg-[#15de9b] hover:text-white hover:border-2 hover:border-[#2cc994] hover:transition-colors hover:duration-700 hover:cursor-pointer">Volver</a>
+            </div>
+        </div>
+        <section class="fixed bottom-[10rem] right-[1rem]">
+            <div class="rounded-full">
+                <a href="https://wa.me/message/ASYN7T656JNNF1" target="_blank" rel="noopener noreferrer">
+                    <img src="/whts_sm.webp" loading="lazy" alt="WhatsApp Icon" class="sombra-redes h-10 w-10 lg:h-12 lg:w-12 hover:scale-110 hover:transition hover:duration-300">
+                </a>
+            </div>
+        </section>
+    </article>
+</Layout>
+
+<style>
+    .sombra_img {
+        box-shadow: 15px 19px 15px -8px rgba(0, 0, 0, 0.281);
+    }
+
+    .sombra-redes:hover {
+        filter: drop-shadow(0 0 0.70rem rgb(11, 201, 59));
+    }
+</style>
+
+
+

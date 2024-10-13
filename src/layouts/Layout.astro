@@ -19,9 +19,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/webp+xml" href="/logo.webp" />
+		<meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+		<link rel="icon" type="image/webp+xml" href="/logo-eg.webp" />
 		<meta name="generator" content={Astro.generator} />
-		<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 		<title>{title}</title>
 		<link rel="canonical" href={canonicalUrl} />
 	</head>

@@ -1,0 +1,15 @@
+---
+const { reparacion } = Astro.props;
+
+---
+
+<div class="">
+  <a href={`/reparacion/${reparacion.id}`}>
+    <img 
+      src={reparacion.img} 
+      alt={reparacion.titulo} 
+      class="mb-3" 
+    />
+    <h3 class="lg:text-xl">{reparacion.titulo}</h3>
+  </a>
+</div>

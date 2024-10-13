@@ -1,0 +1,19 @@
+---
+const { reparacion } = Astro.props;
+
+---
+
+<a href={`/reparacion/${reparacion.id}`}>
+    <img src={reparacion.img} loading="lazy" alt={reparacion.titulo} class="mb-3 sombra"/>
+    <h3 class="lg:text-xl">{reparacion.titulo}</h3>
+</a>
+
+<style>
+.sombra {
+    transition: filter 0.3s ease;
+}
+
+.sombra:hover {
+    filter: drop-shadow(0 0 0.70rem rgb(49, 54, 51));
+}
+</style>
